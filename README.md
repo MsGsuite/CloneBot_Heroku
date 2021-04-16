@@ -27,7 +27,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 <br/>
 
 ### ⚠ You need [service accounts (sa)](https://telegra.ph/How-to-create-and-use-service-accounts-sa-03-31) to use the bot
-<br/><br/><br/>
+<br/><br/>
 
 ## 💠 Host the bot on your computer
 

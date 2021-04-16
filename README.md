@@ -32,7 +32,6 @@
 - Telegram channel : https://t.me/MsGsuite
 - Telegram chat : https://t.me/MsGsuiteChat
 <br/>
-
 ## ❤️ Credits & thanks :
 - [wrenfairbank](https://github.com/wrenfairbank/telegram_gcloner) for the original python script
 - [smartass08](https://github.com/smartass08/telegram_gcloner) to adapt the scrip to heroku

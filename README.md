@@ -23,7 +23,7 @@
 5. Now you can start your bot !
 <br/>
 
-##💠 Host the bot on your computer
+## 💠 Host the bot on your computer
 
 --> https://github.com/MsGsuite/CloneBot
 

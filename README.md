@@ -30,7 +30,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 ## 💠 Host the bot on your computer
 
 --> https://github.com/MsGsuite/CloneBot
-<br/>
+<br/><br/>
 
 ## ⚛️ Deploying on Heroku
 

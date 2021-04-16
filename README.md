@@ -21,7 +21,7 @@
 3. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (remplace YOURAPPNAME by your appname 🙃)
 4. Then click on the ✏ and check $0.00 option and click on confirm.
 5. Now you can start your bot !
-
+5
 
 ##💠 Host the bot on your computer
 

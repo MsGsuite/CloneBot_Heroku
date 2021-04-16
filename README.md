@@ -21,12 +21,12 @@
 3. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (remplace YOURAPPNAME by your appname 🙃)
 4. Then click on the ✏ and check $0.00 option and click on confirm.
 5. Now you can start your bot !
-<br/>
 
 ## 💠 Host the bot on your computer
 
 --> https://github.com/MsGsuite/CloneBot
 <br/>
+
 
 ## ❤️ Credits & thanks :
 - [wrenfairbank](https://github.com/wrenfairbank/telegram_gcloner) for the original python script

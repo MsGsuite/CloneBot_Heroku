@@ -25,8 +25,13 @@
 ## 💠 Host the bot on your computer
 
 --> https://github.com/MsGsuite/CloneBot
-<br/>
+<br/><br/>
 
+## 📢 Follow us:
+- Team drive generator : https://td.msgsuite.workers.dev/
+- Telegram channel : https://t.me/MsGsuite
+- Telegram chat : https://t.me/MsGsuiteChat
+<br/>
 
 ## ❤️ Credits & thanks :
 - [wrenfairbank](https://github.com/wrenfairbank/telegram_gcloner) for the original python script

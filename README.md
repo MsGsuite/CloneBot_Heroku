@@ -1,4 +1,4 @@
-# ⚛️ Deploying on Heroku
+## ⚛️ Deploying on Heroku
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" alt="Deploy to Heroku" /></a></p>
 
@@ -21,7 +21,7 @@ Now you can start your bot !
 
 
 
-# ❤️ Credits & thanks :
+## ❤️ Credits & thanks :
 - [wrenfairbank](https://github.com/wrenfairbank/telegram_gcloner) for the original python script
 - [smartass08](https://github.com/smartass08/telegram_gcloner) to adapt the scrip to heroku
 - [anymeofu](https://github.com/anymeofu/CloneBot) for making the Direct Heroku deployable Version

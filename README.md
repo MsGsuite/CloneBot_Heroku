@@ -22,3 +22,10 @@ CloneBot Tutorial -> https://telegra.ph/How-to-duplicate-team-drives-04-04
 ## Deploying on Heroku
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" alt="Deploy to Heroku" /></a></p>
+
+
+# ❤️ Credits & thanks :
+- [wrenfairbank](https://github.com/wrenfairbank/telegram_gcloner) for the original python script
+- [smartass08](https://github.com/smartass08/telegram_gcloner) to adapt the scrip to heroku
+- [anymeofu](https://github.com/anymeofu/CloneBot) for making the Direct Heroku deployable Version
+- Zero-The-Kamisama to making me discover this amazing bot and the detailed instructions

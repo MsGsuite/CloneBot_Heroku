@@ -48,7 +48,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 >
 > telegram_token = go to @BotFather and send /newbot to get one
 >
-> user_ids = -1 = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
+> user_ids = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
 
 3. Click on Deploy app...
 4. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (remplace YOURAPPNAME by your appname 🙃)

@@ -14,7 +14,9 @@
 			"description": "get from telegram get_id_bot.For More than 1 User Give IDs seperated by ','.The First Guy is the Admin"
 		},
 		"group_ids": {
-			"description": "Create a Super Group(s) and add ID Here.(if More than 1 group Give IDs seperated by ',')"
+			"description": "Create a Super Group(s) and add ID Here.(if More than 1 group Give IDs seperated by ',')",
+			"required": false
+
 		},
 		"gclone_para_override": {
 			"description": "Leave this if u Dont Know",

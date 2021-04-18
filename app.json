@@ -8,18 +8,16 @@
         "success_url": "https://github.com/MsGsuite/CloneBot/blob/master/README.md",
 	"env": {
 		"telegram_token": {
-			"description": "Get from Telegram Botfather."
+			"description": "Get from Telegram @Botfather."
 		},
 		"user_ids": {
-			"description": "get from telegram get_id_bot.For More than 1 User Give IDs seperated by ','.The First Guy is the Admin"
+			"description": "Your user id (use @MissRose_bot and type /id). If you want to add more than 1 User, give IDs seperated by ','. The First user is the Admin"
 		},
 		"group_ids": {
-			"description": "Create a Super Group(s) and add ID Here.(if More than 1 group Give IDs seperated by ',')",
-			"required": false
-
+			"description": "Create a Super Group(s) and add ID Here (use @MissRose_bot and type /id). Add -1 if you don't want to add a group. If More than 1 group Give IDs seperated by ','",
 		},
 		"gclone_para_override": {
-			"description": "Leave this if u Dont Know",
+			"description": "Leave this if you don't know how to use it",
 			"required": false
 		}
 	},

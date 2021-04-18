@@ -7,28 +7,16 @@
         "website": "https://t.me/msgsuitechat",
         "success_url": "https://github.com/MsGsuite/CloneBot/blob/master/README.md",
 	"env": {
-		"general": {
-			"value": "[General]",
-			"description": "Do not touch This"
-		},
-		"path": {
-			"value": "path_to_gclone =./gclone",
-			"description": "Do not touch This"
-		},
 		"telegram_token": {
-			"value": "telegram_token = yourtoken",
-			"description": "Get from Telegram Botfather. Replace yourtoken with your bot token. Dont delete other text"
+			"description": "Get from Telegram Botfather."
 		},
 		"user_ids": {
-			"value": "user_ids = -1",
-			"description": "get from telegram get_id_bot. Replace -1 with your user ids. Dont delete other text. For More than 1 User Give IDs seperated by ','.The First Guy is the Admin"
+			"description": "get from telegram get_id_bot.For More than 1 User Give IDs seperated by ','.The First Guy is the Admin"
 		},
 		"group_ids": {
-			"value": "group_ids = -1",
-			"description": "Create a Super Group(s) and add ID Here. Replace -1 with your group id. Dont delete other text (if More than 1 group Give IDs seperated by ',')"
+			"description": "Create a Super Group(s) and add ID Here.(if More than 1 group Give IDs seperated by ',')"
 		},
 		"gclone_para_override": {
-			"value": "gclone_para_override = ",
 			"description": "Leave this if u Dont Know",
 			"required": false
 		}

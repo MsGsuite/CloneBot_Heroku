@@ -37,7 +37,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 ## ⚛️ Deploying on Heroku
 
 1. Click on the button bellow :
-<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" alt="Deploy to Heroku" /></a></p>
+<p><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2F&template=https://github.com/msgsuite/clonebot_heroku"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" alt="Deploy to Heroku" /></a></p>
 
 
 2. Fill the following values : 

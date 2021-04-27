@@ -53,7 +53,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 > user_ids = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
 
 3. Click on Deploy app...
-4. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (remplace YOURAPPNAME by your appname 🙃)
+4. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (replace YOURAPPNAME by your appname 🙃)
 5. Then click on the ✏ and check $0.00 option and click on confirm.
 6. Now you can start your bot !
 <br/><br/>

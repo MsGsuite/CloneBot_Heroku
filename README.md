@@ -34,6 +34,11 @@ Note : there are hidden features, check at the source code of the bot to find th
 --> https://github.com/MsGsuite/CloneBot
 <br/><br/>
 
+## 📱 Run the bot on your phone using termux
+
+--> https://telegra.ph/Clone-Bot-Termux-04-30
+<br/><br/>
+
 ## ⚛️ Deploying on Heroku
 
  [🎬 Click me for the video tutorial](https://drive.google.com/file/d/1HniSEGUOptbZmHVXuOPULnzpyBBhgw3l/view?usp=sharing)

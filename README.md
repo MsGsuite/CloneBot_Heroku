@@ -73,3 +73,4 @@ Note : there are hidden features, check at the source code of the bot to find th
 - [smartass08](https://github.com/smartass08/telegram_gcloner) to adapt the scrip to heroku
 - [anymeofu](https://github.com/anymeofu/CloneBot) for making the Direct Heroku deployable Version
 - Zero-The-Kamisama to making me discover this amazing bot and the detailed instructions
+- [zorgof](https://t.me/zorgof) for the termux script

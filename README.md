@@ -43,7 +43,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 
  [🎬 Click me for the video tutorial](https://drive.google.com/file/d/1HniSEGUOptbZmHVXuOPULnzpyBBhgw3l/view?usp=sharing)
  
-1. Click on the button bellow :
+1. Click on the button below :
 <p><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2F&template=https://github.com/msgsuite/clonebot_heroku"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" alt="Deploy to Heroku" /></a></p>
 
 
@@ -58,7 +58,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 > user_ids = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
 
 3. Click on Deploy app...
-4. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (remplace YOURAPPNAME by your appname 🙃)
+4. When it's over, go to : https://dashboard.heroku.com/apps/YOURAPPNAME/resources (replace YOURAPPNAME by your appname 🙃)
 5. Then click on the ✏ and check $0.00 option and click on confirm.
 6. Now you can start your bot !
 <br/><br/>

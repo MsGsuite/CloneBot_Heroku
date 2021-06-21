@@ -56,7 +56,7 @@ def chosen_folder(update, context):
         gd = GoogleDrive(update.effective_user.id)
     except Exception as e:
         context.bot.send_message(chat_id=update.effective_user.id,
-                                 text='🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured.\n'
+                                 text='🔸 Please make sure the Service Accounts archive (.zip file) has been uploaded and the collection folder has been configured.Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) 🔸\n'
                                       '<code>{}</code>'.format(html.escape(str(e))),
                                  parse_mode=ParseMode.HTML)
         return
@@ -103,7 +103,7 @@ def choose_folder(update, context):
         gd = GoogleDrive(update.effective_user.id)
     except Exception as e:
         context.bot.send_message(chat_id=update.effective_user.id,
-                                 text='🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured.\n'
+                                 text='🔸 Please make sure the Service Accounts archive (.zip file) has been uploaded and the collection folder has been configured. Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) 🔸\n'
                                       '<code>{}</code>'.format(html.escape(str(e))),
                                  parse_mode=ParseMode.HTML)
         return
@@ -125,7 +125,7 @@ def choose_folder(update, context):
     page = None
     message_id = -1
     if not query:
-        rsp = update.message.reply_text('⚙️ Getting directory...')
+        rsp = update.message.reply_text('⚙️ Getting Directory list...')
         rsp.done.wait(timeout=60)
         message_id = rsp.result().message_id
         if not folders:
@@ -171,7 +171,7 @@ def choose_folder(update, context):
                 folders = gd.get_drives()
                 context.user_data[udkey_folders_cache] = copy.deepcopy(folders)
             if not folders:
-                folders = {'#': 'If you have no shared drives, go to @MsGsuite to get one.'}
+                folders = {'#': 'If you dont have Shared Drives go to td.msgsuite.workers.dev to get a yourself a New Shared Drive. Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar)'}
         else:
             alert_users(context, update.effective_user, 'invalid query data', query.data)
             query.answer(text='Yo-he!', show_alert=True)
@@ -218,7 +218,7 @@ def choose_folder(update, context):
                                       InlineKeyboardButton('Cancel', callback_data='cancel')])
     context.bot.edit_message_text(chat_id=update.effective_chat.id,
                                   message_id=message_id,
-                                  text='🔶 Select the directory you want to use, there are {} subdirectories.'.format(
+                                  text='🔶 Select the directory where you want to save your folder and files, there are {} subdirectories. Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar)'.format(
                                       folders_len),
                                   reply_markup=InlineKeyboardMarkup(inline_keyboard_drive_ids))
 
@@ -235,7 +235,7 @@ def set_folders(update, context):
     query = update.callback_query
     page = 1
     if not query:
-        rsp = update.message.reply_text('⚙️ Getting shared drives...')
+        rsp = update.message.reply_text('⚙️ Getting the List of all the Shared Drives associated with your Service Accounts ⚙️ /n Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) ')
         rsp.done.wait(timeout=60)
         message_id = rsp.result().message_id
     else:
@@ -263,7 +263,7 @@ def set_folders(update, context):
         inline_keyboard_drive_ids = []
         folder_ids_len = 0
     if folder_ids_len < max_folders:
-        inline_keyboard_drive_ids.insert(0, [InlineKeyboardButton('➕ Add favorite folder', callback_data=callback_query_prefix)])
+        inline_keyboard_drive_ids.insert(0, [InlineKeyboardButton('➕ Mark/Favourite Your Folders now so that you can choose the Destination while copying. /n Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar)', callback_data=callback_query_prefix)])
     inline_keyboard_drive_ids.append([InlineKeyboardButton('✔️ Done', callback_data='cancel')])
 
     context.bot.edit_message_text(chat_id=update.effective_chat.id,

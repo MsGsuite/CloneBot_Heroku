@@ -36,9 +36,9 @@ class MySaveFileThread(threading.Thread):
         chat_id = update.effective_chat.id
         user_id = update.effective_user.id
         gd = GoogleDrive(user_id)
-        message = '╭──────⌈ 📥 Copying ⌋──────╮\n│\n├ 📂 Target directory：{}\n'.format(dest_folder['path'])
+        message = ' Bot Modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \n \n ╭──────⌈ 📥 Copying 📥 ⌋──────╮\n│\n├ 📂📂 Destinaton Folder/Shared Drive：{}\n'.format(dest_folder['path'])
         inline_keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text=f'🚫 Stop', callback_data=f'stop_task,{thread_id}')]])
+            [[InlineKeyboardButton(text=f'🚫 Stop File Transfer 🚫', callback_data=f'stop_task,{thread_id}')]])
 
         reply_message_id = update.callback_query.message.reply_to_message.message_id \
             if update.callback_query.message.reply_to_message else None
@@ -153,13 +153,17 @@ class MySaveFileThread(threading.Thread):
                         progress_checked_files = int(match_checked_files.group(1))
                         progress_total_check_files = int(match_checked_files.group(2))
                     progress_max_percentage_10 = max(progress_size_percentage_10, progress_file_percentage_10)
-                    message_progress = '├ 🗂 Source : <a href="https://drive.google.com/open?id={}">{}</a>\n│\n' \
+                    message_progress = '├──────⌈ 📥📥File Transfer in Progress📥📥 ⌋──────' \n \
+                                       '├ 🗂 Source : <a href="https://drive.google.com/open?id={}">{}</a>\n│\n' \
                                        '├ ✔️ Checks： <code>{} / {}</code>\n' \
                                        '├ 📥 Transfers： <code>{} / {}</code>\n' \
                                        '├ 📦 Size：<code>{} / {}</code>\n{}' \
-                                       '├ ⚡️Speed：<code>{}</code> \n├⏳ ETA: <code>{}</code>\n' \
+                                       '├ ⚡️Speed：<code>{}</code> \n' \
+                                       '├ 📥 Transfer Rate : <code>{}</code> \n' \
+                                       '├ ⏳ ETA: <code>{}</code>\n' \
                                        '├ ⛩ Progress：[<code>{}</code>] {: >4}%\n│\n' \
-                                       '├──────⌈ ⚡️ CloneBot ⌋──────' \
+                                       '├ Bot Modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \
+                                       '├──────⌈ ⚡️⚡️ Google Drive Clone Bot ⚡️⚡️ ⌋──────' \n \
                         .format(
                         folder_id,
                         html.escape(destination_path),
@@ -177,9 +181,9 @@ class MySaveFileThread(threading.Thread):
                                 10 - progress_max_percentage_10),
                         progress_file_percentage)
 
-                    match = re.search(r'Failed to copy: failed to make directory', output)
+                    match = re.search(r'Failed to Copy: Failed to create Destination Folder', output)
                     if match:
-                        message_progress = '{}\n│<code>Write permission error, please check permissions</code>'.format(message_progress)
+                        message_progress = '{}\n│<code>Write Permission Error.Please check your service account settings.</code>'.format(message_progress)
                         temp_message = '{}{}'.format(message, message_progress)
                         # logger.info('写入权限错误，请确认权限'.format())
                         try:
@@ -196,7 +200,7 @@ class MySaveFileThread(threading.Thread):
 
                     match = re.search(r"couldn't list directory", output)
                     if match:
-                        message_progress = '{}\n│<code>Read permission error, please check permissions</code>'.format(message_progress)
+                        message_progress = '{}\n│<code>Read Permission File.Source Folder is not available to copy </code>'.format(message_progress)
                         temp_message = '{}{}'.format(message, message_progress)
                         # logger.info('读取权限错误，请确认权限：')
                         try:
@@ -233,7 +237,7 @@ class MySaveFileThread(threading.Thread):
 
             rc = process.poll()
             message_progress_heading, message_progress_content = message_progress.split('\n│', 1)
-            link_text = 'Unable to get link.'
+            link_text = 'Unable to fetch link of destinaton folder.'
             try:
                 link = gd.get_folder_link(dest_folder['folder_id'], destination_path)
                 if link:

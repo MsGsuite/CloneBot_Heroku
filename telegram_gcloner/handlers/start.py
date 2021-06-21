@@ -20,7 +20,8 @@ def init(dispatcher: Dispatcher):
 def start(update, context):
     rsp = update.message.reply_text('🔺 First, send me a ZIP archive containing the SA files and add /sa to the subject.\n'
                                     '📂 After that, use /folders to set destination folders.\n'
-                                    '🔗 You are now ready to go! Just forward or send a Google Drive link.')
+                                    '🔗 You are now ready to go! Just forward or send a Google Drive link.'
+                                    'Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar)')
     rsp.done.wait(timeout=60)
     message_id = rsp.result().message_id
     if update.message.chat_id < 0:

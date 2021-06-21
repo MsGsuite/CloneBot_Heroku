@@ -1,0 +1,14 @@
+start - Start the Bot
+sa - Upload the Serivce Account zip file to use the Bot
+folders - Select the Shared Drives where you wish to save your files and folders
+add_group - 
+ban - 
+cancel - 
+choose_folder -
+contact - 
+get_help - 
+get_id -
+process_drive_links - 
+process_message -
+stop_task -
+vip -

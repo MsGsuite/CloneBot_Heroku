@@ -70,14 +70,14 @@ def process_drive_links(update, context):
     try:
         gd = GoogleDrive(update.effective_user.id)
     except Exception as e:
-        update.message.reply_text('🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured.\n{}'.format(e))
+        update.message.reply_text('🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured.\n Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \n{}'.format(e))
         return
 
     for item in folder_ids:
         try:
             folder_name = gd.get_file_name(item)
         except Exception as e:
-            update.message.reply_text('🔸 Please make sure that the SA archive has been uplaoded and that the SA has permission to access the link.\n{}'.format(e))
+            update.message.reply_text('🔸 Please make sure that the SA archive has been uplaoded and that the SA has permission to access the link.\n Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \n{}'.format(e))
             return
         message += '     <a href="https://drive.google.com/open?id={}">{}</a>\n'.format(
             item, html.escape(folder_name))
@@ -132,7 +132,7 @@ def save_to_folder_page(update, context):
             max_per_page=10,
         )
     else:
-        inline_keyboard_drive_ids = [[InlineKeyboardButton(text='🔹 If you don\'t have any shared drives, you must get one here : @MsGsuite before you can use this.', callback_data='#')]]
+        inline_keyboard_drive_ids = [[InlineKeyboardButton(text='🔹 If you dont have Shared Drives go to td.msgsuite.workers.dev to get a yourself a New Shared Drive. Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar).', callback_data='#')]]
     inline_keyboard = inline_keyboard_drive_ids
     query.message.edit_reply_markup(reply_markup=InlineKeyboardMarkup(inline_keyboard))
 

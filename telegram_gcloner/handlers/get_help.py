@@ -18,8 +18,9 @@ def init(dispatcher: Dispatcher):
 
 @restricted
 def get_help(update, context):
-    message = 'Send a Google Drive link, or forward a message with a Google Drive link to manually transfer.\n' \
-              'Configuration with /sa and /folders is required.\n\n' \
+    message = 'Send a Google Drive link, or forward a message with a Google Drive link to copy the files.\n' \
+              'Pre - Configuration with /sa and /folders is required is necessary to use the Bot on Telegram.\n\n' \
+              'Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \n\n' \
               '📚 Commands:\n' \
               ' │ /folders - Set favorite folders\n' \
               ' │ /sa - Private chat only, upload a ZIP containing SA accounts with this command as the subject.\n' \

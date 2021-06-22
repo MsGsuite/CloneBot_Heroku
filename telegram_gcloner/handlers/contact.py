@@ -41,7 +41,7 @@ def contact(update, context):
             context.job_queue.run_once(callback_delete_message, config.TIMER_TO_DELETE_MESSAGE,
                                        context=(update.message.chat_id, update.message.message_id))
     else:
-        rsp = update.message.reply_text('You\'re so shy, don\'t you want to say anything?\n' +
+        rsp = update.message.reply_text('You can contact my owner on Telegram at @aishik_tokdar\n' +
                                         config.AD_STRING.format(context.bot.username),
                                         ParseMode.HTML)
         rsp.done.wait(timeout=60)

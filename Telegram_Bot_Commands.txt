@@ -1,14 +1,10 @@
 start - Start the Bot
 sa - Upload the Serivce Account zip file to use the Bot
 folders - Select the Shared Drives where you wish to save your files and folders
-add_group - 
-ban - 
-cancel - 
-choose_folder -
-contact - 
-get_help - 
-get_id -
-process_drive_links - 
-process_message -
-stop_task -
-vip -
+ban - Ban a Telegram User ID from using the Bot
+unban - Reallow a Telegram User ID from using the Bot that was earlier banned
+contact - Get the contacts details of the owner of the Bot
+help - Get Information about the Bot
+id - Get your Telegram User  ID
+vip - Add a Telegram User ID to the VIP Access List
+unvip - Remove a Telegram User ID to the VIP Access List

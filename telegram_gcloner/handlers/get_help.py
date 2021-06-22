@@ -22,9 +22,16 @@ def get_help(update, context):
               'Pre - Configuration with /sa and /folders is required is necessary to use the Bot on Telegram.\n\n' \
               'Bot modified by Aishik Tokdar/NL Wizard (@aishik_tokdar) \n\n' \
               '📚 Commands:\n' \
-              ' │ /folders - Set favorite folders\n' \
-              ' │ /sa - Private chat only, upload a ZIP containing SA accounts with this command as the subject.\n' \
-              ' │ /help - Output this message\n'
+              ' │ /start - Start the Bot\n' \
+              ' │ /sa - Upload the Serivce Account zip file to use the Bot\n' \
+              ' │ /folders - Select the Shared Drives where you wish to save your files and folders\n' \
+              ' │ /ban - Ban a Telegram User ID from using the Bot\n' \
+              ' │ /unban - Reallow a Telegram User ID from using the Bot that was earlier banned\n' \
+              ' │ /contact - Get the contacts details of the owner of the Bot\n' \
+              ' │ /help - Get Information about the Bot\n' \
+              ' │ /id - Get your Telegram User  ID\n' \
+              ' │ /vip - Add a Telegram User ID to the VIP Access List\n' \
+              ' │ /unvip - Remove a Telegram User ID to the VIP Access List\n' \
     rsp = update.message.reply_text(message)
     rsp.done.wait(timeout=60)
     message_id = rsp.result().message_id

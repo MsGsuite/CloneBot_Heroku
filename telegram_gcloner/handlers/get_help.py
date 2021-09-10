@@ -20,10 +20,16 @@ def init(dispatcher: Dispatcher):
 def get_help(update, context):
     message = 'Send a Google Drive link, or forward a message with a Google Drive link to manually transfer.\n' \
               'Configuration with /sa and /folders is required.\n\n' \
-              '📚 Commands:\n' \
+              '📚 Bot Commands:\n' \
               ' │ /folders - Set favorite folders\n' \
               ' │ /sa - Private chat only, upload a ZIP containing SA accounts with this command as the subject.\n' \
               ' │ /help - Output this message\n'
+              ' │ /ban - Ban a Telegram User ID from using the Bot.\n'
+              ' │ /unban - Reallow a Telegram User ID from using the Bot that was earlier banned.\n'
+              ' │ /vip - Add a Telegram User ID to the VIP Access List.\n'
+              ' │ /unvip - Remove a Telegram User ID to the VIP Access List.\n'
+              ' │ /id - Get your Telegram User  ID.\n'
+              ' │ /contact - Get the contacts details of the owner of the Bot.\n'
     rsp = update.message.reply_text(message)
     rsp.done.wait(timeout=60)
     message_id = rsp.result().message_id

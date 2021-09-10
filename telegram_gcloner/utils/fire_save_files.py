@@ -36,7 +36,7 @@ class MySaveFileThread(threading.Thread):
         chat_id = update.effective_chat.id
         user_id = update.effective_user.id
         gd = GoogleDrive(user_id)
-        message = '╭──────⌈ 📥 Copying ⌋──────╮\n│\n├ 📂 Target directory：{}\n'.format(dest_folder['path'])
+        message = '╭──────⌈ 📥 Copying In Progress ⌋──────╮\n│\n├ 📂 Target Directory：{}\n'.format(dest_folder['path'])
         inline_keyboard = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text=f'🚫 Stop', callback_data=f'stop_task,{thread_id}')]])
 
@@ -153,13 +153,14 @@ class MySaveFileThread(threading.Thread):
                         progress_checked_files = int(match_checked_files.group(1))
                         progress_total_check_files = int(match_checked_files.group(2))
                     progress_max_percentage_10 = max(progress_size_percentage_10, progress_file_percentage_10)
-                    message_progress = '├ 🗂 Source : <a href="https://drive.google.com/open?id={}">{}</a>\n│\n' \
+                    message_progress = '├──────⌈ Made with Love by MsgSuite ⌋──────' \
+                                       '├ 🗂 Source : <a href="https://drive.google.com/open?id={}">{}</a>\n│\n' \
                                        '├ ✔️ Checks： <code>{} / {}</code>\n' \
                                        '├ 📥 Transfers： <code>{} / {}</code>\n' \
                                        '├ 📦 Size：<code>{} / {}</code>\n{}' \
                                        '├ ⚡️Speed：<code>{}</code> \n├⏳ ETA: <code>{}</code>\n' \
-                                       '├ ⛩ Progress：[<code>{}</code>] {: >4}%\n│\n' \
-                                       '├──────⌈ ⚡️ CloneBot ⌋──────' \
+                                       '├ ⛩ Progress：[<code>{}</code>] {: >2}%\n│\n' \
+                                       '├──────⌈ ⚡️ MsgSuite CloneBot  ⚡️ ⌋──────' \
                         .format(
                         folder_id,
                         html.escape(destination_path),
@@ -177,11 +178,11 @@ class MySaveFileThread(threading.Thread):
                                 10 - progress_max_percentage_10),
                         progress_file_percentage)
 
-                    match = re.search(r'Failed to copy: failed to make directory', output)
+                    match = re.search(r'Failed to Copy: Failed to Make Directory in the Destination', output)
                     if match:
-                        message_progress = '{}\n│<code>Write permission error, please check permissions</code>'.format(message_progress)
+                        message_progress = '{}\n│<code>Destination Write Permission Error.\n Please ensure that you have rights to upload files to the Destination.</code>'.format(message_progress)
                         temp_message = '{}{}'.format(message, message_progress)
-                        # logger.info('写入权限错误，请确认权限'.format())
+                        # logger.info('Write permission error, please confirm permission'.format())
                         try:
                             context.bot.edit_message_text(chat_id=chat_id, message_id=message_id,
                                                           text=temp_message, parse_mode=ParseMode.HTML,
@@ -194,11 +195,11 @@ class MySaveFileThread(threading.Thread):
                         self.critical_fault = True
                         break
 
-                    match = re.search(r"couldn't list directory", output)
+                    match = re.search(r"Couldn't List Directory", output)
                     if match:
-                        message_progress = '{}\n│<code>Read permission error, please check permissions</code>'.format(message_progress)
+                        message_progress = '{}\n│<code>Source Read permission Error. \n Please ensure that you have rights to read files from the Source Link</code>'.format(message_progress)
                         temp_message = '{}{}'.format(message, message_progress)
-                        # logger.info('读取权限错误，请确认权限：')
+                        # logger.info('Read permission error, please confirm the permission：')
                         try:
                             context.bot.edit_message_text(chat_id=chat_id, message_id=message_id,
                                                           text=temp_message, parse_mode=ParseMode.HTML,
@@ -227,17 +228,17 @@ class MySaveFileThread(threading.Thread):
                             progress_update_time = datetime.datetime.now()
 
                     if self.critical_fault:
-                        message_progress = '{}\n│\n│ User terminated'.format(message_progress)
+                        message_progress = '{}\n│\n│ You have terminated the Cloning Process'.format(message_progress)
                         process.terminate()
                         break
 
             rc = process.poll()
             message_progress_heading, message_progress_content = message_progress.split('\n│', 1)
-            link_text = 'Unable to get link.'
+            link_text = 'Unable to fetch Google Drive Link.'
             try:
                 link = gd.get_folder_link(dest_folder['folder_id'], destination_path)
                 if link:
-                    link_text = '\n│ \n│      👉 <a href="{}">Link</a> 👈'.format(link)
+                    link_text = '\n│ \n│      👉 <a href="{}">Google Drive Link</a> 👈'.format(link)
             except Exception as e:
                 logger.info(str(e))
 
@@ -245,7 +246,7 @@ class MySaveFileThread(threading.Thread):
                 message = '{}{} ❌\n│{}\n│{}\n│'.format(message, message_progress_heading, message_progress_content,
                                                      link_text)
             elif progress_file_percentage == 0 and progress_checked_files > 0:
-                message = '{}{} ✅\n│ File already exists!\n│ {}\n│'.format(message, message_progress_heading, link_text)
+                message = '{}{} ✅\n│ File Already Exists in the Destination!\n│ {}\n│'.format(message, message_progress_heading, link_text)
             else:
                 message = '{}{}{}\n│{}\n│{}\n│\n│'.format(message,
                                                       message_progress_heading,
@@ -264,7 +265,7 @@ class MySaveFileThread(threading.Thread):
             if self.critical_fault is True:
                 break
 
-        message += '\n╰──────⌈ ✅ Finished ! ⌋──────╯'
+        message += '\n╰──────⌈ ✅ Cloning Process Finished ! ✅ ⌋──────╯'
         try:
             context.bot.edit_message_text(chat_id=chat_id, message_id=message_id, text=message,
                                           parse_mode=ParseMode.HTML, disable_web_page_preview=True)

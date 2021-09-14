@@ -96,7 +96,7 @@ Wait a little bit.You will see that your app has been deployed to Railway and th
 
 6.Then Click Start App. Click Show Logs
 
-Wait a little bit.You will see that your app has been deployed to Qovery and then you can clone without any Time Limit.<b>Railway does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b>
+Wait a little bit.You will see that your app has been deployed to Qovery and then you can clone without any Time Limit.<b>Qovery does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b>
 
 
 ## 📢 Follow us:

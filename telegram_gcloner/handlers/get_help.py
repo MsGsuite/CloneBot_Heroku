@@ -21,9 +21,15 @@ def get_help(update, context):
     message = 'Send a Google Drive link, or forward a message with a Google Drive link to manually transfer.\n' \
               'Configuration with /sa and /folders is required.\n\n' \
               '📚 Commands:\n' \
+              ' │ /start - Start the Bot' \
               ' │ /folders - Set favorite folders\n' \
               ' │ /sa - Private chat only, upload a ZIP containing SA accounts with this command as the subject.\n' \
+              ' │ /ban - Ban a Telegram User ID from using the Bot' \
+              ' │ /unban - Reallow a Telegram User ID from using the Bot that was earlier banned' \
+              ' │ /id - Get your Telegram User  ID' \
+              ' │ /contact - Get the contacts details of the owner of the Bot' \
               ' │ /help - Output this message\n'
+
     rsp = update.message.reply_text(message)
     rsp.done.wait(timeout=60)
     message_id = rsp.result().message_id

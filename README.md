@@ -1,4 +1,4 @@
-<h1 align="center">⚛️ Clonebot - Heroku/Railway/Qovery version ⚡<br></h1> 
+<h1 align="center">⚛️ Clonebot - Heroku/Railway/Qovery/Clever Cloud version ⚡<br></h1> 
 
 <br />
 
@@ -18,6 +18,7 @@
 - Copy public folders & files to team drives
 - [Host it to Railway]
 - [Host it to Qovery]
+- [Host it to Clever Cloud]
 - [Host it to heroku](https://github.com/MsGsuite/CloneBot_Heroku)
 
 #### ❌ Drawbacks
@@ -105,7 +106,11 @@ Note : there are hidden features, check at the source code of the bot to find th
 >
 > user_ids = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
 
-6. Wait a little bit.You will see that your app has been deployed to Qovery and then you can clone without any Time Limit.<b><br/>Qovery does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b>
+6. Wait a little bit.You will see that your app has been deployed to Qovery and then you can clone without any Time Limit.<b><br/>Qovery does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b><br><br>
+
+## 💎 Deploying on Clever Cloud
+<a href="https://bit.ly/CloneBot_CleverCloud"><img src="https://img.shields.io/badge/Clever%20Cloud%20Deploy%20Guide-grey?style=for-the-badge&logo=telegraph"></a>
+<b><br/>Clever Cloud does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b>
 
 
 ## 📢 Follow us:

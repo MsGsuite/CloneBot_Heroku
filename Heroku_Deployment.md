@@ -38,6 +38,12 @@
     > telegram_token = go to @BotFather and send /newbot to get one
 	>
     > user_ids = Your user id (go to @MissRose_bot and type /id to get your id) - If you want to authorize multiple users, add a comma between each ID (ex: 150654065,5897065)
+	>
+	> HEROKU_EMAIL = Just Give the email you used for Heroku Account
+	>
+	> HEROKU_API_KEY = Get it from [Click Here](https://dashboard.heroku.com/account/applications/authorizations/new)
+	>
+	> HEROKU_APP_NAME = Heroku app name that needs to be Updated or Created (Should be in lowercase)
 	
 
 🎈4. **After filling the Required vars .... go to Actions and then tap on Run the Workflow**

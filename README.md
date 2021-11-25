@@ -20,7 +20,7 @@
 - [Host it to Qovery]
 - [Host it to Clever Cloud]
 - [Host it to Scalingo]
-- [Host it to heroku](https://github.com/MsGsuite/CloneBot_Heroku)
+- [Host it to Heroku]
 
 #### ❌ Drawbacks
 - Does not support files upload (only copy)
@@ -45,11 +45,14 @@ Note : there are hidden features, check at the source code of the bot to find th
 
 ## ⚛️ Deploying on Heroku
 
-Method - 1 : ᴠɪᴀ ɢɪᴛʜᴜʙ ᴀᴄᴛɪᴏɴs
+𝙈𝙚𝙩𝙝𝙤𝙙 - 1 : ᴠɪᴀ ɢɪᴛʜᴜʙ ᴀᴄᴛɪᴏɴ𝙨
+
 [![Deploy](https://telegra.ph/file/e7d224c45cf1d106a28fa.png)](Heroku_Deployment.md)
 
 
-Method - 2 : ᴠɪᴀ ᴇᴅɪᴛɪɴɢ ʀᴇᴘᴏ ɴᴀᴍᴇ ᴀɴᴅ ʟɪɴᴋ
+
+𝙈𝙚𝙩𝙝𝙤𝙙 - 2 : ᴠɪᴀ ᴇᴅɪᴛɪɴɢ ʀᴇᴘᴏ ɴᴀᴍᴇ ᴀɴᴅ ʟɪɴᴋ
+
 [![Deploy](https://telegra.ph/file/e7d224c45cf1d106a28fa.png)](https://telegra.ph/Temporary-Heroku-Deployment-Method-for-MSGuite-CloneBot-11-23)
 
 
@@ -79,6 +82,8 @@ Method - 2 : ᴠɪᴀ ᴇᴅɪᴛɪɴɢ ʀᴇᴘᴏ ɴᴀᴍᴇ ᴀɴᴅ ʟɪɴ�
 ## 🌟 Deploying on Qovery
 <img src="https://i.imgur.com/VT7bQZb.png" alt="Deploy to Qovery"/>
 
+𝐒𝐓𝐄𝐏𝐒-
+<BR>
 1. Login to Qovery via Github Account.Fork this Repo.
 2. Then create a new Environment followed by new app.Just follow the On-Screen Instructions.
 3. Then select Deploy App from Repo and click the Repo in your Account.

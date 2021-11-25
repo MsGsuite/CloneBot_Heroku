@@ -41,7 +41,7 @@
 	>
 	> HEROKU_EMAIL = Just Give the email you used for Heroku Account
 	>
-	> HEROKU_API_KEY = Get it from [Click Here](https://dashboard.heroku.com/account/applications/authorizations/new)
+	> HEROKU_API_KEY = Get it from ---->(https://dashboard.heroku.com/account/applications/authorizations/new)
 	>
 	> HEROKU_APP_NAME = Heroku app name that needs to be Updated or Created (Should be in lowercase)
 	

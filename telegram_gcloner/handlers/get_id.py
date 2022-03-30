@@ -18,7 +18,7 @@ def init(dispatcher: Dispatcher):
 
 @restricted
 def get_id(update, context):
-    logger.info('telegram user {0} has requested its id.'.format(update.effective_user.id))
+    logger.info('Telegram User {0} has requested its ID.'.format(update.effective_user.id))
     rsp = update.message.reply_text(update.effective_user.id)
     rsp.done.wait(timeout=60)
     message_id = rsp.result().message_id

@@ -28,12 +28,12 @@ def add_group(update, context):
             mention_html_from_user = mention_html(update.message.from_user.id,
                                                   html.escape(update.message.from_user.full_name))
             context.bot.send_message(chat_id=update.message.chat_id,
-                                     text='『{}』Thank you for adding this bot to the group. {}'
+                                     text='『{}』Thank you for adding this MsgSuite CloneBot bot to the group. {}'
                                      .format(mention_html_from_user,
                                              config.AD_STRING.format(context.bot.username)),
                                      parse_mode=ParseMode.HTML)
-            context.bot.send_message(chat_id=update.message.chat_id, text='I am not authorized to be here 😔. Ask my owner to allow me in your group.')
-            message = '🔙 Left unauthorized group : \n │ Name : {} ({}). \n │ Added by{} {}. \n │ Message : {}'.format(
+            context.bot.send_message(chat_id=update.message.chat_id, text='I am not authorized to be here 😔. \n So I am leaving this group. \n Ask my owner to allow me in your group.')
+            message = '🔙 Left Uunauthorized Group : \n │ Name : {} ({}). \n │ Bot Added by{} {}. \n │ Message : {}'.format(
                 update.message.chat.title,
                 update.message.chat_id,
                 mention_html_from_user,

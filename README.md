@@ -138,7 +138,7 @@ You need to fillup the below variables in order to use it in Okteto
 <br>This Service is like Heroku as it does not mention any definite number of days in Free Trial.<b><br/>Okteto does not restart App every 24 hours meaning you can clone large data which can run for days at a time </b><br><br>
 
 ## 📢 Follow us:
-- Team drive generator : https://td.msgsuite.workers.dev/
+- Team drive generator : https://msgsuite.eu.org/
 - Telegram channel : https://t.me/MsGsuite
 - Telegram chat : https://t.me/MsGsuiteChat
 

@@ -45,7 +45,7 @@ def get_sa(update, context):
     file_name = document.file_name
 
     if not file_name.endswith('zip'):
-        update.message.reply_text('Only zip files are accepted.')
+        update.message.reply_text('Only Zip Files are accepted.')
         return
 
     file_pah = os.path.join(gclone_path,
@@ -106,5 +106,5 @@ def get_sa(update, context):
     with open(os.path.join(zip_path, 'rclone.conf'), 'w') as file_to_write:
         config_file.write(file_to_write)
 
-    update.message.reply_text('✔️ A total of {} SA files were received and configured. \n │ Now bookmark your favorite folders with /folders'.format(json_count))
-    logger.info('{} service account files have been saved for {}.'.format(json_count, update.effective_user.id))
+    update.message.reply_text('✔️ A total of {} SA files were received and configured to use in Clone Bot. \n │ Now bookmark your favorite folders with /folders'.format(json_count))
+    logger.info('{} Service Accounts have been saved for the User {}.'.format(json_count, update.effective_user.id))

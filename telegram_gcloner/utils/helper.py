@@ -35,7 +35,7 @@ def parse_folder_id_from_url(url):
 
 def alert_users(context, user_info, warning_message, text):
     mention_html_user = mention_html(user_info.id, html.escape(user_info.full_name))
-    message = '🤔 Suspicious behaviour from user {} {}: {} {}.'.format(
+    message = '🤔 Detected Suspicious Behaviour from User {} {}: {} {}.'.format(
         mention_html_user,
         user_info.id,
         warning_message,

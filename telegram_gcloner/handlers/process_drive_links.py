@@ -65,23 +65,23 @@ def process_drive_links(update, context):
 
     if not folder_ids:
         return
-    message = '📑 The following files were detected :\n'
+    message = '📑 The Following Files were Detected : 📑\n'
 
     try:
         gd = GoogleDrive(update.effective_user.id)
     except Exception as e:
-        update.message.reply_text('🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured.\n{}'.format(e))
+        update.message.reply_text('🔸 Please make sure the SA archive has been uploaded and the collection folder has been configured. 🔸\n{}'.format(e))
         return
 
     for item in folder_ids:
         try:
             folder_name = gd.get_file_name(item)
         except Exception as e:
-            update.message.reply_text('🔸 Please make sure that the SA archive has been uplaoded and that the SA has permission to access the link.\n{}'.format(e))
+            update.message.reply_text('🔸 Please make sure that the SA archive has been uplaoded and yuor SA have rights to read files from the Source Link. 🔸\n{}'.format(e))
             return
         message += '     <a href="https://drive.google.com/open?id={}">{}</a>\n'.format(
             item, html.escape(folder_name))
-    message += '\n📂 Please select the target destination'
+    message += '\n📂 Please select the Target Destination 📂'
     fav_folder_ids = context.user_data.get(udkey_folders, None)
 
     callback_query_prefix = 'save_to_folder'
@@ -97,7 +97,7 @@ def process_drive_links(update, context):
             max_per_page=10,
         )
     else:
-        inline_keyboard_drive_ids = [[InlineKeyboardButton(text='⚠️ Use /folders to add a favorite folder', callback_data='#')]]
+        inline_keyboard_drive_ids = [[InlineKeyboardButton(text='⚠️ Use /folders to add a destination to Favourite Folders List ⚠️', callback_data='#')]]
     inline_keyboard = inline_keyboard_drive_ids
     update.message.reply_text(message, parse_mode=ParseMode.HTML,
                               disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(inline_keyboard))

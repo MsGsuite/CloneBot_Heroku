@@ -21,8 +21,8 @@ class _Config:
         self._group_ids = ''
         self._gclone_para_override = ''
         self._base_path = os.path.dirname(os.path.dirname(__file__))
-        self.TIMER_TO_DELETE_MESSAGE = 10
-        self.AD_STRING = ' Goodbye, please talk to the bot<a href="{}"> privately.</a>'
+        self.TIMER_TO_DELETE_MESSAGE = 20
+        self.AD_STRING = ' Goodbye, Please talk to the Bot<a href="{}"> privately.</a>'
 
     def load_config(self):
         logger.debug('Loading config')
@@ -36,7 +36,7 @@ class _Config:
             sys.exit(1)
 
         if not config_file.has_section('General'):
-            logger.warning("Can't find General section in config.")
+            logger.warning("Can't find General section in the Config File.")
             input('Press enter to exit.')
             sys.exit(1)
 
@@ -57,16 +57,16 @@ class _Config:
         if not os.path.isfile(self._path_to_gclone):
             self._path_to_gclone = shutil.which('gclone')
             if not self._path_to_gclone:
-                logger.warning('gclone executable is not found.')
+                logger.warning('Gclone Executable was not found in the Drectory.')
                 input("Press Enter to continue...")
                 sys.exit(0)
         logger.info('Found gclone: ' + self._path_to_gclone)
 
         if not self._telegram_token:
-            logger.warning('telegram token is not provided.')
+            logger.warning('Telegram Bot Token not found.')
             input("Press Enter to continue...")
             sys.exit(0)
-        logger.info('Found token: ' + self._telegram_token)
+        logger.info('Found Bot Token: ' + self._telegram_token)
 
         if self._gclone_para_override:
             self._gclone_para_override = self._gclone_para_override.split()

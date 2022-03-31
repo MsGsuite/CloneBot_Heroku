@@ -37,7 +37,7 @@ def stop_task(update, context):
                 for t in tasks:
                     if t.ident == thread_id and t.owner == query.from_user.id:
                         t.kill()
-                        logger.info('User {} has stopped task {}'.format(query.from_user.id, thread_id))
+                        logger.info('User {} has stopped Cloning Task {}'.format(query.from_user.id, thread_id))
                         return
     alert_users(context, update.effective_user, 'invalid query data', query.data)
     query.answer(text='Yo-he!', show_alert=True)

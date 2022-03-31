@@ -19,7 +19,7 @@ def restricted(func):
         # access control. comment out one or the other as you wish. otherwise you can use any of the following examples.
         # if user_id in ban_list:
         if user_id in ban_list or user_id not in config.USER_IDS:
-            logger.info('Unauthorized access denied for {} {}.'
+            logger.info('UnAuthorized Access denied for {} {}.'
                         .format(update.effective_user.full_name, user_id))
             return
         return func(update, context, *args, **kwargs)

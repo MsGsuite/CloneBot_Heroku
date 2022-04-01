@@ -1,8 +1,7 @@
 FROM ubuntu:20.04
 
-FROM postgres:10
-ENV TZ="Africa/Lusaka"
-RUN date
+ARG ARG_TIMEZONE=Asia/Shanghai
+ENV ENV_TIMEZONE                ${ARG_TIMEZONE}
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
@@ -15,6 +14,10 @@ RUN apt-get -qq install -y git python3 python3-pip \
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt && \
     apt-get -qq purge git
+	
+RUN echo '$ENV_TIMEZONE' > /etc/timezone \
+    && ln -fsn /usr/share/zoneinfo/$ENV_TIMEZONE /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata	
 	
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8

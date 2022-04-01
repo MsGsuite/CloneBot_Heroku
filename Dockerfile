@@ -1,7 +1,6 @@
 FROM ubuntu:20.04
 
-ARG ARG_TIMEZONE=Asia/Shanghai
-ENV ENV_TIMEZONE                ${ARG_TIMEZONE}
+docker run -e TZ=America/New_York ubuntu date
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app

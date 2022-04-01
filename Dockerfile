@@ -3,6 +3,10 @@ FROM ubuntu:20.04
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
+FROM postgres:10
+ENV TZ="Africa/Lusaka"
+RUN date
+
 RUN apt-get -qq update
 RUN apt-get -qq install -y git python3 python3-pip \
     locales python3-lxml aria2 \
@@ -16,8 +20,6 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
-ENV TZ=US
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY . .
 

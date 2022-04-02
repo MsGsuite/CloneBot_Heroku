@@ -46,7 +46,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 
 ## ⚛️ Deploying on Heroku
 
-[Deploy on Heroku](https://github.com/TheCaduceus/CloneBot_Heroku)
+[Deploy on Heroku](https://www.heroku.com/deploy?template=https://github.com/TheCaduceus/CloneBot_Heroku)
 ## ☂ Deploying on Railway.app
 
 1. For Direct Deploy,Click on the Below Button<br/>

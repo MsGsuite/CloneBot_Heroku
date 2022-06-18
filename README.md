@@ -11,6 +11,8 @@
 
 <br />
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MsGsuite/CloneBot_Heroku
+
 #### ✅ Advantages
 - Use server side copy
 - Bypass the 750Gb a day limit thanks to Service accounts

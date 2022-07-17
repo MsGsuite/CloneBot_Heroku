@@ -46,7 +46,7 @@ Note : there are hidden features, check at the source code of the bot to find th
 
 ## ⚛️ Deploying on Heroku
 
-𝙈𝙚𝙩𝙝𝙤𝙙 - 1 : ᴠɪᴀ ɢɪᴛʜᴜʙ ᴀᴄᴛɪᴏɴ𝙨
+𝙈𝙚𝙩𝙝𝙤𝙙 - 1 : https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2F&template=https://github.com/megadownload11/CloneBot
 
 [![Deploy](https://telegra.ph/file/e7d224c45cf1d106a28fa.png)](Heroku_Deployment.md)
 
